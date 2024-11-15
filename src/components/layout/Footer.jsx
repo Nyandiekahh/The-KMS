@@ -1,24 +1,14 @@
-// src/components/layout/Footer.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../../styles/footer.css';
 
-const Footer = ({ isDashboard = false }) => {
+const Footer = () => {
+  const location = useLocation();
   const currentYear = new Date().getFullYear();
 
-  if (isDashboard) {
-    return (
-      <footer className="dashboard-footer">
-        <div className="footer-content">
-          <p>© {currentYear} KMS Sacco. All rights reserved.</p>
-          <div className="footer-links">
-            <Link to="/dashboard/settings">Terms of Service</Link>
-            <Link to="/dashboard/settings">Privacy Policy</Link>
-            <a href="mailto:support@kmssacco.com">Support</a>
-          </div>
-        </div>
-      </footer>
-    );
+  // Check if current path starts with /dashboard
+  if (location.pathname.startsWith('/dashboard')) {
+    return null; // Don't render anything on dashboard pages
   }
 
   return (
