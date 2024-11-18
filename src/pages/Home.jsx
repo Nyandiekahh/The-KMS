@@ -164,7 +164,7 @@ const Home = () => {
               <>
                 <div className="stat-card">
                   <h3>
-                    <CountUp end={5000} duration={2.5} prefix="KSH " separator="," />
+                    <CountUp end={1500} duration={2.5} prefix="KSH " separator="," />
                   </h3>
                   <p>Minimum Investment</p>
                 </div>
