@@ -417,7 +417,7 @@ const Home = () => {
               title: 'Account Activation',
               description: 'Get your member number and access your digital account',
               icon: '✅',
-              amount: 'To join the sacco, invest KSH 1,500 now, and the share capital withing the next 12 months of joining the sacco'
+              amount: 'To join the sacco, invest KSH 1,500 now, and the share capital within the next 12 months of joining the sacco'
             }
           ].map((step, index) => (
             <motion.div 
